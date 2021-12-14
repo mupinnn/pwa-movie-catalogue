@@ -1,3 +1,3 @@
 import 'regenerator-runtime';
-
-console.log('Hello!');
+import '../styles/style.css';
+import '../styles/responsive.css';

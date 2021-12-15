@@ -8,3 +8,11 @@ const app = new App({
   drawer: document.getElementById('navigationDrawer'),
   content: document.getElementById('content'),
 });
+
+window.addEventListener('hashchange', () => {
+  app.renderPage();
+});
+
+window.addEventListener('load', () => {
+  app.renderPage();
+});

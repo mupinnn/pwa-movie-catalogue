@@ -13,9 +13,9 @@ const Upcoming = {
 
   async afterRender() {
     const movies = await TMDBSource.fetchUpcomingMovies();
-    const movieContainer = document.getElementById('movies');
+    const moviesContainer = document.getElementById('movies');
     movies.forEach((movie) => {
-      movieContainer.innerHTML += createMovieItemTemplate(movie);
+      moviesContainer.innerHTML += createMovieItemTemplate(movie);
     });
   },
 };

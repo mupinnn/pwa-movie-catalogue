@@ -1,12 +1,22 @@
+import TMDBSource from '../../data/tmdb-source';
+import { createMovieItemTemplate } from '../templates/template-creator';
+
 const Upcoming = {
   async render() {
     return `
-      <h2>Upcoming Page</h2>
+      <div class"content">
+        <h2 class="content__heading">Upcoming in Cinema</h2>
+        <div id="movies" class="movies"></div>
+      </div>
     `;
   },
 
   async afterRender() {
-    //
+    const movies = await TMDBSource.fetchUpcomingMovies();
+    const movieContainer = document.getElementById('movies');
+    movies.forEach((movie) => {
+      movieContainer.innerHTML += createMovieItemTemplate(movie);
+    });
   },
 };
 

@@ -3,6 +3,7 @@ const CONFIG = {
   BASE_URL: 'https://api.themoviedb.org/3/',
   BASE_IMG_URL: 'https://image.tmdb.org/t/p/w500/',
   DEFAULT_LANG: 'en-us',
+  CACHE_NAME: 'MovieCatalogue-V1',
 };
 
 export default CONFIG;

@@ -16,5 +16,5 @@ self.addEventListener('activate', (event) => {
 });
 
 self.addEventListener('fetch', (event) => {
-  event.waitUntil(CacheHelper.revalidateCache(event.request));
+  event.respondWith(CacheHelper.revalidateCache(event.request));
 });

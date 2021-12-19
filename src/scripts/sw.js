@@ -1,9 +1,9 @@
 /* eslint-disable no-restricted-globals */
 
-// daftar aset yang secara otomatis dibuat oleh serviceworker-webpack-plugin
 import 'regenerator-runtime';
 import CacheHelper from './utils/cache-helper';
 
+// daftar aset yang secara otomatis dibuat oleh serviceworker-webpack-plugin
 const { assets } = global.serviceWorkerOption;
 
 self.addEventListener('install', (event) => {
